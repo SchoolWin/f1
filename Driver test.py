@@ -48,7 +48,7 @@ if not st.session_state.quiz_completed:
 
     # Display the driver's face
     try:
-        image_path = f"Images/{st.session_state.drivers}.png"  
+        image_path = f"images/{st.session_state.drivers}.png"
         if os.path.exists(image_path):
             st.image(image_path)
         else:
