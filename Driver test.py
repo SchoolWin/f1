@@ -20,7 +20,7 @@ if 'remaining_driver' not in st.session_state:
 racers = [
  
     "kimi antonelli", "george russell", "charles leclerc", "lewis hamilton", "pierre gasly", "jack doohan", "lance stroll",
-    "fernando alonso", "esteban ocon", "oliver bearman", "nico hulkenburg", "gabriel bortoleto", "oscar piastri", "lando norris",
+    "fernando alonso", "esteban ocon", "oliver bearman", "nico hulkenberg", "gabriel bortoleto", "oscar piastri", "lando norris",
     "isack hadjar", "yuki tsunoda", "max verstappen", "liam lawson", "alex albon", "carlos sainz"
 ]
 
