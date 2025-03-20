@@ -58,7 +58,7 @@ if not st.session_state.quiz_completed:
 
     
     # Input for the answer
-    answer = st.text_input("Who is the driver above?").strip().lower()
+    answer = st.text_input("Who is the driver above? (First name + Last name)").strip().lower()
     st.session_state.asnwer = True
 
 
