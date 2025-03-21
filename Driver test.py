@@ -2,6 +2,8 @@ import streamlit as st
 import random
 import os
 
+# to start venv = .\.venv\bin\Activate.ps1
+
 # Set up status
 if 'current_question' not in st.session_state:
     st.session_state.current_question = 0
@@ -15,6 +17,8 @@ if 'quiz_completed' not in st.session_state:
     st.session_state.quiz_completed = False
 if 'remaining_driver' not in st.session_state:
     st.session_state.remaining_driver = []
+def clear_text(): # this is the function you define (def is a Python keyword and is short for 'define')
+  st.session_state["text"] = ''  # add "text" as a key using the square brackets notation and set it to have the value '' 
 
 # List of all drivers
 racers = [
@@ -44,8 +48,6 @@ if not st.session_state.quiz_completed:
             st.session_state.drivers = random.choice(st.session_state.remaining_driver)
             st.session_state.remaining_driver.remove(st.session_state.drivers)
 
-
-
     # Display the driver's face
     try:
         image_path = f"images/{st.session_state.drivers}.png"
@@ -58,7 +60,7 @@ if not st.session_state.quiz_completed:
 
     
     # Input for the answer
-    answer = st.text_input("Who is the driver above? (First name + Last name)").strip().lower()
+    answer = st.text_input("Who is the driver above? (First name + Last name)", key="text").strip().lower()
     st.session_state.asnwer = True
 
 
@@ -79,7 +81,7 @@ if not st.session_state.quiz_completed:
 
     # Show next question button
     if st.session_state.answered:
-        if st.button("**Next Question**"):
+        if st.button("**Next Question**", on_click=clear_text):
             if st.session_state.current_question < 9:
                 st.session_state.current_question += 1
                 st.session_state.answered = False
