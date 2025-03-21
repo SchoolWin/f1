@@ -18,7 +18,7 @@ if 'quiz_completed' not in st.session_state:
 if 'remaining_driver' not in st.session_state:
     st.session_state.remaining_driver = []
 def clear_text(): 
-  st.session_state["text"] = ''  
+  st.session_state["text"] = ''  #
 
 # List of all drivers
 racers = [
