@@ -17,8 +17,8 @@ if 'quiz_completed' not in st.session_state:
     st.session_state.quiz_completed = False
 if 'remaining_driver' not in st.session_state:
     st.session_state.remaining_driver = []
-def clear_text(): # this is the function you define (def is a Python keyword and is short for 'define')
-  st.session_state["text"] = ''  # add "text" as a key using the square brackets notation and set it to have the value '' 
+def clear_text(): 
+  st.session_state["text"] = ''  
 
 # List of all drivers
 racers = [
@@ -79,7 +79,7 @@ if not st.session_state.quiz_completed:
             st.error(f"Incorrect! The correct answer was {st.session_state.drivers}")
 
 
-    # Show next question button
+    # Show next question button and after click goes to next question and clears it
     if st.session_state.answered:
         if st.button("**Next Question**", on_click=clear_text):
             if st.session_state.current_question < 9:
