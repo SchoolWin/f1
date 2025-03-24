@@ -18,14 +18,14 @@ if 'quiz_completed' not in st.session_state:
 if 'remaining_driver' not in st.session_state:
     st.session_state.remaining_driver = []
 def clear_text(): 
-  st.session_state["text"] = ''  #
+  st.session_state["text"] = ''  
 
 # List of all drivers
 racers = [
  
-    "kimi antonelli", "george russell", "charles leclerc", "lewis hamilton", "pierre gasly", "jack doohan", "lance stroll",
-    "fernando alonso", "esteban ocon", "oliver bearman", "nico hulkenberg", "gabriel bortoleto", "oscar piastri", "lando norris",
-    "isack hadjar", "yuki tsunoda", "max verstappen", "liam lawson", "alex albon", "carlos sainz"
+    "Kimi Antonelli", "George Russell", "Charles Leclerc", "Lewis Hamilton", "Pierre Gasly", "Jack Doohan", "Lance Stroll",
+    "Fernando Alonso", "Esteban Ocon", "Oliver Bearman", "Nico Hulkenberg", "Gabriel Bortoleto", "Oscar Piastri", "Lando Norris",
+    "Isack Hadjar", "Yuki Tsunoda", "Max Verstappen", "Liam Lawson", "Alexander Albon", "Carlos Sainz"
 ]
 
 # Reset drivers list if it is empty or makes the driver known to code
@@ -60,7 +60,7 @@ if not st.session_state.quiz_completed:
 
     
     # Input for the answer
-    answer = st.text_input("Who is the driver above? (First name + Last name)", key="text").strip().lower()
+    answer = st.text_input("Who is the driver above? (Same name as the F1 Website)", key="text").strip().lower()
     st.session_state.asnwer = True
 
 
