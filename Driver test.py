@@ -34,12 +34,15 @@ if not st.session_state.remaining_driver:
 
 # Sets title
 st.title("F1 Driver Test")
-st.write("Click **Submit Answer** Button, not the ENTER key.")
-st.write("Clicking the **Submit Answer** Button for a second time, the answer will not change, but will get rid of the correct or incorrect message.")
+
 
 # Quiz loop
 if not st.session_state.quiz_completed:
 
+    #Gives Slight Instructions
+    st.write("Click **Submit Answer** Button, not the ENTER key.")
+    st.write("Clicking the **Submit Answer** Button for a second time, the answer will not change, but will get rid of the correct or incorrect message.")
+    
     #Shows question number
     st.write(f"Question {st.session_state.current_question + 1} of 10")
 
