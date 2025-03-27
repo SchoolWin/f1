@@ -2,7 +2,7 @@ import streamlit as st
 import random
 import os
 
-# to start venv = .\.venv\bin\Activate.ps1
+# to start venv = .\.venv\bin\Activate.ps1 (For visual studios programer to run locally)
 
 # Set up status
 if 'current_question' not in st.session_state:
