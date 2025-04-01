@@ -7,3 +7,5 @@ This is for the Assessment AS 92004 v2-2025. The code is about the 20 drivers fr
 To access the website go to: https://f1drivertest2025.streamlit.app
 
 All photos and names from: https://www.formula1.com/en/drivers
+
+Last updated 31/03/2025
